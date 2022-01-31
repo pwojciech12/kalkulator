@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>kalkulator</title>
+    <style>
+        td {
+            background-color: rebeccapurple;
+            width: 50px;
+            height: 50px;
+            border: black solid 2px;
+            text-align: center;
+        }
+        div {
+            margin-right: 3px;
+        }
+        .container {
+            width: 100%;
+        }
+        .kalkulator {
+            margin: auto;
+            width: 50%;
+        }
+        #memory {
+            font-size: small;
+            height: 15px;
+        }
+        #ekran {
+            position: relative;
+            top: 25%;
+            height: 35px
+        }
+        .button_container button {
+            background-color: yellow;
+            font-size: 16px;
+            font-weight: bold;
+            border-style: groove;
+
+        }
+        .button_container button:hover{
+            font-size: 22px;
+            background-color: #00ACDE;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Kalkulator</h1>
+   <div class="button_container">
+       <button id="button-open" style="display: block">Open</button>
+       <button id="button-close" style="display: none">Close</button>
+   </div>
+    <div class="container">
+        <div class="kalkulator" style="display: none">
+            <table>
+                <tr>
+                    <td id="ekran_memory" colspan="4" style="text-align: right;">
+                            <div id="memory"></div>
+                            <div id="ekran"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="czytaj(1)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')" >1</td>
+                    <td onclick="czytaj(2)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">2</td>
+                    <td onclick="czytaj(3)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurpley')">3</td>
+                    <td onclick="wyczysc_ekran()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">C</td>
+                </tr>
+                <tr>
+                    <td onclick="czytaj(4)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">4</td>
+                    <td onclick="czytaj(5)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">5</td>
+                    <td onclick="czytaj(6)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">6</td>
+                    <td onclick="add()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="czytaj(7)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">7</td>
+                    <td onclick="czytaj(8)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">8</td>
+                    <td onclick="czytaj(9)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">9</td>
+                    <td onclick="subtract()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="czytaj(0)" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">0</td>
+                    <td onclick="multiplication()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">*</td>
+                    <td onclick="division()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">/</td>
+                    <td onclick="result()" onmouseover="onChangeColor(this,'red')" onmouseout="onChangeColor(this,'rebeccapurple')">=</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script src="js/scripts.js"></script>
+</body>
+</html>

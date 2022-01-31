@@ -1,0 +1,9 @@
+{
+  "name": "wojtek_kalkulator",
+  "scripts": {
+    "start": "lws --port=8089 --dir=src/"
+  },
+  "devDependencies": {
+    "light-web-server": "^1.2.8"
+  }
+}
